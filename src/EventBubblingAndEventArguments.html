@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>opgave torsdag</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="myStyle.css">
+    </head>
+    <body>
+
+        <div id="outer">
+            <div id="1" class="mydiv">Klik 1</div>
+
+            <div id="2" class="mydiv">Klik 2</div>
+
+            <div id="3" class="mydiv">Klik 3</div>
+
+            <div id="4" class="mydiv">Klik 4</div>
+
+            <div id="5" class="mydiv">Klik 5</div>
+
+            <div id="6" class="mydiv">Klik 6</div>
+
+            <div id="7" class="mydiv">Klik 7</div>
+
+            <div id="8" class="mydiv">Klik 8</div>
+
+            <div id="9" class="mydiv">Klik 9</div>
+
+            <div id="10" class="mydiv">Klik 10</div>
+            
+            <p id="pId"></p>
+ 
+        </div>
+
+        <script>
+
+            document.getElementById("1").addEventListener("click", function () {
+                console.log("Hi from " + event.target.getAttribute("id"))
+            })
+
+            document.getElementById("2").addEventListener("click", function () {
+                console.log("Hi from " + event.target.getAttribute("id"))
+            })
+            
+             document.getElementById("outer").addEventListener("click", function (e) {
+                var target = e.target
+                console.log("hi from " + event.target.getAttribute("id"));
+            })
+            
+            const outerdiv = document.getElementById("outer")
+            outerdiv.addEventListener("click", function () {
+                console.log("hi from: " + event.target.getAttribute("id"))
+                document.getElementById("pId").innerText = "hi from" + event.target.getAttribute("id")
+            })
+
+
+
+        </script>
+    </body>
+</html>
